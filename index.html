@@ -269,6 +269,53 @@
       padding: 20px;
       font-weight: 720;
     }
+    .comparison {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .compare-card {
+      background: var(--paper);
+      padding: 26px;
+      min-height: 300px;
+    }
+    .compare-card.highlight {
+      background: var(--ink);
+      color: var(--paper);
+    }
+    .compare-card h3 {
+      font-size: 25px;
+      margin-bottom: 18px;
+    }
+    .compare-card p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+    }
+    .compare-card.highlight p { color: #c8c5bb; }
+    .wins {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+    .win {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 22px;
+      min-height: 170px;
+    }
+    .win strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+    .win span {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 15px;
+    }
     .pricing {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -321,13 +368,18 @@
       justify-content: space-between;
       gap: 20px;
     }
+    footer a {
+      color: #f7f6f1;
+      text-decoration: none;
+    }
+    footer a:hover { text-decoration: underline; }
     @media (max-width: 860px) {
       .nav-inner { height: auto; min-height: 66px; align-items: flex-start; padding-top: 16px; padding-bottom: 16px; }
       .nav-links { display: none; }
-      .hero, .section-head, .before-after, .gallery, .pricing { grid-template-columns: 1fr; }
+      .hero, .section-head, .before-after, .gallery, .pricing, .comparison { grid-template-columns: 1fr; }
       .hero { padding-top: 42px; min-height: auto; gap: 42px; }
       .section { padding: 70px 20px; }
-      .problem-list, .steps, .segments { grid-template-columns: 1fr; }
+      .problem-list, .steps, .segments, .wins { grid-template-columns: 1fr; }
       .problem-list div { min-height: auto; }
     }
   </style>
@@ -352,6 +404,7 @@
         <div class="nav-links">
           <a href="#demo">Demo</a>
           <a href="#process">Så funkar det</a>
+          <a href="#skillnad">Skillnaden</a>
           <a href="#trygghet">Trygghet</a>
           <a href="#pris">Pris</a>
         </div>
@@ -366,7 +419,7 @@
           <p class="lead">Vi gör dokument, PDF:er och mötesanteckningar till en källspårad kunskapsbas i Obsidian.</p>
           <p class="sublead">För små och medelstora verksamheter som drunknar i information men inte har tid att bygga ett AI-system själva.</p>
           <div class="actions">
-            <a class="btn primary" href="mailto:andreas.hillborgh@gmail.com?subject=StrawberrAI%20demo">Boka gratis demo</a>
+            <a class="btn primary" href="mailto:Andreas.guldberg@gmail.com?subject=StrawberrAI%20demo">Boka gratis demo</a>
             <a class="btn secondary" href="#demo">Se exempel</a>
           </div>
           <p class="trust">Första demo görs med 3–5 ofarliga dokument. Inga känsliga filer behövs.</p>
@@ -456,7 +509,49 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="skillnad">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Skillnaden</div>
+            <h2>Inte bara chatbot. Inte bara RAG.</h2>
+          </div>
+          <p class="section-text">En chatbot svarar i stunden. Ett RAG-system hämtar dokumentbitar vid frågetillfället. StrawberrAI bygger en levande wiki där kunskapen sparas, länkas och blir bättre över tid.</p>
+        </div>
+        <div class="comparison">
+          <div class="compare-card">
+            <h3>Chatbot</h3>
+            <p>Ger snabba svar, men mycket värde fastnar i chatthistorik. Nästa fråga börjar ofta om från början.</p>
+          </div>
+          <div class="compare-card">
+            <h3>RAG</h3>
+            <p>Hämtar relevanta dokumentbitar när du frågar, men bygger inte automatiskt en tydlig kunskapsstruktur.</p>
+          </div>
+          <div class="compare-card highlight">
+            <h3>LLM Wiki</h3>
+            <p>Skapar source pages, begreppssidor, index, logg och sparade frågor. Resultatet blir en lokal kunskapsbas kunden äger.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="section">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Vinster</div>
+              <h2>Vad kunden får ut.</h2>
+            </div>
+            <p class="section-text">Kunden köper inte AI-hype. Kunden köper ordning, tid, tryggare beslut och en kunskapsbas som går att fortsätta använda.</p>
+          </div>
+          <div class="wins">
+            <div class="win"><strong>Mindre letande</strong><span>Dokument, källor och svar samlas i en navigerbar struktur.</span></div>
+            <div class="win"><strong>Källspårning</strong><span>Varje slutsats kan kopplas tillbaka till source pages och originalmaterial.</span></div>
+            <div class="win"><strong>Återanvändbar kunskap</strong><span>Bra frågor sparas som sidor istället för att försvinna i chatten.</span></div>
+            <div class="win"><strong>Lokalt ägande</strong><span>Vaulten är markdown i Obsidian. Kunden behåller filerna.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="demo">
         <div class="section-head">
           <div>
             <div class="eyebrow">Demo</div>
@@ -568,14 +663,14 @@
       <section class="final">
         <h2>Har du tre dokument som borde vara lättare att hitta i?</h2>
         <p>Skicka 3–5 ofarliga dokument så bygger vi en mini-wiki och visar hur det kan fungera i din verksamhet.</p>
-        <a class="btn secondary" href="mailto:andreas.hillborgh@gmail.com?subject=StrawberrAI%20mini-demo">Boka gratis demo</a>
+        <a class="btn secondary" href="mailto:Andreas.guldberg@gmail.com?subject=StrawberrAI%20mini-demo">Boka gratis demo</a>
       </section>
     </main>
 
     <footer>
       <div>
         <span>StrawberrAI — LLM Wiki Service</span>
-        <span>Local-first AI knowledge bases.</span>
+        <span><a href="https://www.linkedin.com/in/andreas-hillborgh-51581371?utm_source=share_via&utm_content=profile&utm_medium=member_android">LinkedIn</a> · <a href="mailto:Andreas.guldberg@gmail.com">Andreas.guldberg@gmail.com</a></span>
       </div>
     </footer>
   </div>
