@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StrawberrAI -- Lokal AI-wiki for din verksamhet</title>
+    <title>StrawberrAI — Lokala AI-wikis för foretag</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,14 +15,12 @@
         }
 
         :root {
-            --black: #000000;
+            --ink: #050505;
+            --paper: #F7F6F1;
+            --red: #E0001B;
+            --line: #D8D6CE;
+            --muted: #8A8A84;
             --white: #ffffff;
-            --gray-100: #f5f5f5;
-            --gray-200: #e5e5e5;
-            --gray-300: #d4d4d4;
-            --gray-400: #a3a3a3;
-            --gray-500: #737373;
-            --berry: #d63447;
             --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
@@ -32,10 +30,20 @@
 
         body {
             font-family: var(--font);
-            background: var(--white);
-            color: var(--black);
+            background: var(--paper);
+            color: var(--ink);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
         }
 
         /* Navigation */
@@ -45,96 +53,113 @@
             left: 0;
             right: 0;
             height: 64px;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(247, 246, 241, 0.96);
             backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--line);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 48px;
+            padding: 0 80px;
             z-index: 1000;
         }
 
         .logo {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
-        .logo span.underline-r {
-            text-decoration: underline;
-            text-decoration-thickness: 2px;
-            text-underline-offset: 4px;
-        }
+        .logo .r { color: var(--red); }
+        .logo .rr { color: var(--red); text-decoration: underline; text-underline-offset: 4px; }
 
         nav ul {
             display: flex;
-            gap: 32px;
+            gap: 48px;
             list-style: none;
         }
 
         nav a {
-            color: var(--gray-500);
-            text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 500;
+            color: var(--muted);
+            letter-spacing: 0.02em;
             transition: color 0.2s;
         }
 
         nav a:hover {
-            color: var(--black);
+            color: var(--ink);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 80px;
         }
 
         /* Hero */
         .hero {
-            padding: 160px 48px 120px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 160px 80px 120px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .hero-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .hero .logo-mark {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 32px;
+            line-height: 1;
         }
 
         .hero h1 {
-            font-size: clamp(40px, 6vw, 72px);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.1;
-            margin-bottom: 32px;
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
         }
 
-        .hero h1 .underline-err {
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
-            text-underline-offset: 6px;
-            text-decoration-color: var(--berry);
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: var(--gray-500);
-            max-width: 600px;
+        .hero .subline {
+            font-size: 18px;
+            color: var(--muted);
+            line-height: 1.5;
             margin-bottom: 48px;
+            max-width: 420px;
         }
 
-        .cta-group {
+        .cta-row {
             display: flex;
             gap: 16px;
-            flex-wrap: wrap;
+            align-items: center;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 14px 28px;
-            font-size: 15px;
+            padding: 13px 24px;
+            font-size: 14px;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 6px;
             text-decoration: none;
             transition: all 0.2s;
+            cursor: pointer;
+            border: none;
         }
 
         .btn-primary {
-            background: var(--black);
-            color: var(--white);
+            background: var(--ink);
+            color: var(--paper);
         }
 
         .btn-primary:hover {
@@ -142,100 +167,164 @@
         }
 
         .btn-secondary {
-            background: var(--white);
-            color: var(--black);
-            border: 1px solid var(--gray-300);
+            background: transparent;
+            color: var(--ink);
+            border: 1px solid var(--line);
         }
 
         .btn-secondary:hover {
-            border-color: var(--black);
+            border-color: var(--ink);
         }
 
-        /* Section */
+        .proof-line {
+            margin-top: 24px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            border: 1px solid var(--line);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: var(--line);
+        }
+
+        /* Section spacing */
         section {
-            padding: 100px 48px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 100px 80px;
         }
 
         .section-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: var(--gray-400);
+            color: var(--muted);
             margin-bottom: 16px;
         }
 
         .section-title {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 64px;
+            line-height: 1.2;
         }
 
         /* Problem */
         .problem {
-            background: var(--gray-100);
-            border-radius: 16px;
-            padding: 48px;
+            background: var(--white);
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .problem-headline {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            line-height: 1.3;
+        }
+
+        .problem-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .problem-list li {
+            font-size: 15px;
+            color: var(--muted);
+            padding: 12px 0;
+            border-bottom: 1px solid var(--line);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .problem-list li:last-child {
+            border-bottom: none;
+        }
+
+        .problem-list .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* Before/After */
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            margin-top: -100px;
             margin-bottom: 100px;
         }
 
-        .problem p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: var(--gray-500);
+        .before-after > div {
+            background: var(--paper);
+            padding: 48px;
         }
 
-        .problem strong {
-            color: var(--black);
+        .before-after .label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 24px;
         }
 
-        /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 24px;
-        }
-
-        .feature-card {
-            padding: 32px;
-            border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            transition: border-color 0.2s;
-        }
-
-        .feature-card:hover {
-            border-color: var(--black);
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--gray-100);
-            border-radius: 8px;
+        .before-after ul {
+            list-style: none;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-            font-size: 20px;
-            font-weight: 600;
+            flex-direction: column;
+            gap: 12px;
         }
 
-        .feature-card h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        .feature-card p {
+        .before-after ul li {
             font-size: 14px;
-            color: var(--gray-500);
-            line-height: 1.6;
+            color: var(--muted);
+            padding-left: 16px;
+            position: relative;
         }
 
-        /* How it works */
+        .before-after ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 6px;
+            height: 1px;
+            background: var(--muted);
+        }
+
+        .before-after .after ul li::before {
+            background: var(--ink);
+        }
+
+        /* Steps */
         .steps {
             display: flex;
             flex-direction: column;
@@ -245,78 +334,150 @@
         .step {
             display: grid;
             grid-template-columns: 80px 1fr;
-            gap: 32px;
+            gap: 40px;
             padding: 40px 0;
-            border-bottom: 1px solid var(--gray-200);
+            border-bottom: 1px solid var(--line);
         }
 
         .step:last-child {
             border-bottom: none;
         }
 
-        .step-number {
-            font-size: 48px;
+        .step-num {
+            font-size: 13px;
             font-weight: 700;
-            color: var(--gray-200);
-            line-height: 1;
+            color: var(--red);
+            letter-spacing: 0.05em;
+            font-variant-numeric: tabular-nums;
         }
 
         .step h3 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .step p {
-            font-size: 15px;
-            color: var(--gray-500);
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        /* Demo screenshots */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .demo-grid img {
+            background: var(--paper);
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Who its for */
+        .segments {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .segment {
+            padding: 10px 20px;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Trust */
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .trust-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .trust-item .num {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--red);
+            font-variant-numeric: tabular-nums;
+            flex-shrink: 0;
+            width: 24px;
+        }
+
+        .trust-item p {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.5;
         }
 
         /* Pricing */
-        .pricing {
+        .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 24px;
         }
 
         .pricing-card {
-            border: 1px solid var(--gray-200);
-            border-radius: 16px;
+            border: 1px solid var(--line);
+            border-radius: 8px;
             padding: 40px;
+            background: var(--white);
         }
 
         .pricing-card.featured {
-            border-color: var(--black);
+            border-color: var(--ink);
+            border-width: 2px;
         }
 
         .pricing-card h3 {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 16px;
+            font-weight: 700;
             margin-bottom: 8px;
         }
 
         .pricing-card .price {
             font-size: 36px;
             font-weight: 700;
-            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
         }
 
-        .pricing-card .price span {
-            font-size: 16px;
+        .pricing-card .price small {
+            font-size: 14px;
             font-weight: 400;
-            color: var(--gray-500);
+            color: var(--muted);
+        }
+
+        .pricing-card .desc {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 32px;
+            line-height: 1.5;
         }
 
         .pricing-features {
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             margin-bottom: 32px;
         }
 
         .pricing-features li {
-            font-size: 14px;
-            color: var(--gray-500);
-            padding: 8px 0;
-            padding-left: 24px;
+            font-size: 13px;
+            color: var(--muted);
+            padding-left: 16px;
             position: relative;
         }
 
@@ -324,248 +485,313 @@
             content: '';
             position: absolute;
             left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 16px;
-            height: 16px;
-            background: var(--gray-100);
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            background: var(--line);
             border-radius: 50%;
         }
 
-        /* Contact */
-        .contact {
-            background: var(--black);
-            color: var(--white);
-            border-radius: 16px;
-            padding: 64px;
+        .pricing-card.featured .pricing-features li::before {
+            background: var(--red);
+        }
+
+        /* Final CTA */
+        .final-cta {
             text-align: center;
+            max-width: 480px;
+            margin: 0 auto;
         }
 
-        .contact h2 {
-            font-size: 36px;
+        .final-cta h2 {
+            font-size: 24px;
             font-weight: 700;
+            letter-spacing: -0.02em;
             margin-bottom: 16px;
+            line-height: 1.3;
         }
 
-        .contact p {
-            font-size: 18px;
-            color: var(--gray-400);
+        .final-cta p {
+            font-size: 15px;
+            color: var(--muted);
             margin-bottom: 32px;
-        }
-
-        .contact .btn-primary {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        .contact .btn-primary:hover {
-            background: var(--gray-100);
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
-            padding: 48px;
-            text-align: center;
-            font-size: 14px;
-            color: var(--gray-400);
+            padding: 48px 80px;
+            border-top: 1px solid var(--line);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
+        footer p {
+            font-size: 12px;
+            color: var(--muted);
+        }
+
+        footer .footer-logo {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        footer .footer-logo .r { color: var(--red); }
+        footer .footer-logo .rr { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+
         /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 0 24px;
-            }
+        @media (max-width: 1024px) {
+            nav { padding: 0 32px; }
+            .container { padding: 0 32px; }
+            section { padding: 80px 32px; }
+            .hero { padding: 120px 32px 80px; grid-template-columns: 1fr; gap: 48px; }
+            .problem-grid { grid-template-columns: 1fr; gap: 40px; }
+            .before-after { grid-template-columns: 1fr; margin-top: 0; }
+            .pricing-grid { grid-template-columns: 1fr; }
+            .demo-grid { grid-template-columns: repeat(2, 1fr); }
+            footer { padding: 40px 32px; flex-direction: column; gap: 16px; text-align: center; }
+        }
 
-            nav ul {
-                display: none;
-            }
-
-            .hero {
-                padding: 120px 24px 80px;
-            }
-
-            section {
-                padding: 60px 24px;
-            }
-
-            .problem {
-                padding: 32px;
-            }
-
-            .contact {
-                padding: 40px 24px;
-            }
-
-            .step {
-                grid-template-columns: 48px 1fr;
-                gap: 20px;
-            }
-
-            .step-number {
-                font-size: 32px;
-            }
+        @media (max-width: 640px) {
+            nav ul { display: none; }
+            .hero { padding: 100px 24px 60px; }
+            section { padding: 60px 24px; }
+            .container { padding: 0 24px; }
+            .demo-grid { grid-template-columns: 1fr; }
+            .trust-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">Strawberr<span class="underline-r">AI</span></div>
+        <div class="logo">Strawberr<span class="r">A</span><span class="rr">I</span></div>
         <ul>
-            <li><a href="#problem">Problemet</a></li>
-            <li><a href="#losning">Losning</a></li>
+            <li><a href="#demo">Demo</a></li>
+            <li><a href="#sa-fungerar">Sa fungerar det</a></li>
             <li><a href="#priser">Priser</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
 
-    <section class="hero">
-        <h1>Lokal kunskapsbas<br>for <span class="underline-err">ERR</span> verksamhet</h1>
-        <p>StrawberrAI bygger AI-underhållna wikis i Obsidian. Din kunskap samlad, strukturerad och alltid tillganglig -- utan att lamna företaget.</p>
-        <div class="cta-group">
-            <a href="#kontakt" class="btn btn-primary">Bestall gratis demo</a>
-            <a href="#losning" class="btn btn-secondary">Sa fungerar det</a>
-        </div>
-    </section>
-
-    <section id="problem">
-        <div class="problem">
-            <p>
-                Er viktigaste kunskap ligger utspridd i PDF:er, mail, mötesanteckningar och gamla dokument.
-                Ni vet att svaret finns nagonstans -- men inte var.<br><br>
-                <strong>Det största hotet:</strong> Företag stoppar allt sitt röriga data i AI-system och förväntar sig pålitliga svar.
-                Men data från 13 olika platser, osynkroniserat, föråldrat, motstridigt -- det förgiftar AI:en.
-                Svaret ser rimligt ut, men det är fel. Och ingen märker det.
-            </p>
-        </div>
-    </section>
-
-    <section id="losning">
-        <p class="section-label">Sa fungerar det</p>
-        <h2 class="section-title">Fran rohoge till strukturerad wiki</h2>
-
-        <div class="steps">
-            <div class="step">
-                <div class="step-number">01</div>
-                <div>
-                    <h3>Dokumenten samlas</h3>
-                    <p>PDF:er, mail, mötesanteckningar och rapporter läggs i en lokal mapp. Ingen molnupload, allt stannar på er dator.</p>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <div class="logo-mark">Strawberr<span style="color:var(--red)">r</span><span style="color:var(--red);text-decoration:underline;text-underline-offset:6px">r</span>AI</div>
+                <h1>Lokala AI-wikis for foretag.</h1>
+                <p class="subline">Vi gor dokument, PDF:er och motesanteckningar till en kallspard kunskapsbas i Obsidian.</p>
+                <div class="cta-row">
+                    <a href="#kontakt" class="btn btn-primary">Boka gratis demo</a>
+                    <a href="#demo" class="btn btn-secondary">Se exempel</a>
                 </div>
+                <p class="proof-line">Forsta demo görs med 3-5 ofarliga dokument. Inga kansliga filer behovs.</p>
             </div>
-            <div class="step">
-                <div class="step-number">02</div>
-                <div>
-                    <h3>AI:n laser och strukturerar</h3>
-                    <p>StrawberrAI summerar, identifierar begrepp och personer, och bygger en sammanhängande wiki-struktur med källhänvisningar.</p>
-                </div>
+            <div class="hero-image">
+                <img src="assets/01-before-after-board.png" alt="Before/After" onerror="this.style.display='none'">
             </div>
-            <div class="step">
-                <div class="step-number">03</div>
+        </section>
+    </div>
+
+    <div class="divider"></div>
+
+    <section class="problem">
+        <div class="container">
+            <div class="problem-grid">
                 <div>
-                    <h3>Fraga och fa svar</h3>
-                    <p>Ställ frågor mot er egen kunskapsbas. Varje svar kommer med käll-länkar så ni kan kontrollera ursprunget.</p>
+                    <p class="section-label">Problemet</p>
+                    <h2 class="problem-headline">Kunskapen finns redan.<br>Den ligger bara utspridd.</h2>
                 </div>
-            </div>
-            <div class="step">
-                <div class="step-number">04</div>
-                <div>
-                    <h3>Wikin växer med er</h3>
-                    <p>Lägg till nya dokument löpande. AI:n håller wikin uppdaterad, strukturerad och redo att svara.</p>
-                </div>
+                <ul class="problem-list">
+                    <li><span class="dot"></span>PDF:er</li>
+                    <li><span class="dot"></span>Motesanteckningar</li>
+                    <li><span class="dot"></span>Mail</li>
+                    <li><span class="dot"></span>Rutiner</li>
+                    <li><span class="dot"></span>Rapporter</li>
+                    <li><span class="dot"></span>Kundfrågor</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <section id="losning">
-        <p class="section-label">Vad du får</p>
-        <h2 class="section-title">Inte en chatbot. En kunskapsbas.</h2>
+    <div class="container">
+        <div class="before-after">
+            <div class="before">
+                <p class="label">Fore</p>
+                <ul>
+                    <li>Mappar och losa dokument</li>
+                    <li>Gamla anteckningar</li>
+                    <li>Svar forsvinner i chatten</li>
+                    <li>13 olika platser for kunskap</li>
+                </ul>
+            </div>
+            <div class="after" style="background:var(--white)">
+                <p class="label" style="color:var(--ink)">After</p>
+                <ul>
+                    <li>Source pages med kallhancisningar</li>
+                    <li>Concept pages som linker samman</li>
+                    <li>Index, logg och sokat kunskap</li>
+                    <li>Kallspardat svar varje gang</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">L</div>
-                <h3>Lokalt</h3>
-                <p>Allt ligger som markdown-filer på er dator. Ingen molntjänst, ingen leverantorsbundenhet.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">K</div>
-                <h3>Källspårat</h3>
-                <p>Varje påstående har en källa. Svara kort, men alltid med möjlighet att fördjupa.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">O</div>
-                <h3>Obsidian</h3>
-                <p>Öppna wikin i gratisversionen av Obsidian. Sök, navigera och lägg till själv.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">A</div>
-                <h3>AI-underhallen</h3>
-                <p>Nyheter, uppdateringar och strukturellt underhåll. Ni fokuserar på verksamheten.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">P</div>
-                <h3>Privat</h3>
-                <p>Ingen data skickas ut. Er information stannar hos er.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">F</div>
-                <h3>Fardig att använda</h3>
-                <p>Levereras som en färdig lösning. Ni behöver inte kunna något om AI i förväg.</p>
+    <div class="divider"></div>
+
+    <section id="sa-fungerar">
+        <div class="container">
+            <p class="section-label">Sa fungerar det</p>
+            <h2 class="section-title">Fran dokumentsamling till strukturerad wiki</h2>
+
+            <div class="steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <div>
+                        <h3>Skicka ofarliga kallor</h3>
+                        <p>3-5 dokument for demo, 20-30 for pilot. Inga kansliga personuppgifter.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <div>
+                        <h3>Vi bygger lokal wiki</h3>
+                        <p>Obsidian, markdown, index, källor, begrepp och logg. Allt lokalt pa er dator.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <div>
+                        <h3>Du far en kunskapsbas</h3>
+                        <p>Sokbar, linkad, kallspard och enkel att fortsatta anvanda.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <div class="divider"></div>
+
+    <section id="demo">
+        <div class="container">
+            <p class="section-label">Demo</p>
+            <h2 class="section-title">Se hur en AI-wiki vaxer fram</h2>
+
+            <div class="demo-grid">
+                <img src="assets/02-before-raw-source-list.png" alt="Raw sources" onerror="this.parentElement.style.display='none'">
+                <img src="assets/03-after-wiki-index.png" alt="Wiki index" onerror="this.parentElement.style.display='none'">
+                <img src="assets/04-question-page.png" alt="Question page" onerror="this.parentElement.style.display='none'">
+                <img src="assets/08-demo-knowledge-graph.png" alt="Knowledge graph" onerror="this.parentElement.style.display='none'">
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <p class="section-label">Målgrupp</p>
+            <h2 class="section-title">For foretag som har mycket kunskap</h2>
+
+            <div class="segments">
+                <div class="segment">Redovisning</div>
+                <div class="segment">Fastighet</div>
+                <div class="segment">Juridik</div>
+                <div class="segment">Bygg/projektledning</div>
+                <div class="segment">HR/rekrytering</div>
+                <div class="segment">Utbildning</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+        <div class="container">
+            <p class="section-label">Trygg start</p>
+            <h2 class="section-title">Lokalt forst. Kangligt sist.</h2>
+
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="num">01</span>
+                    <p>Demo med ofarligt material. Inga kandssliga personuppgifter.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="num">02</span>
+                    <p>Kunden ager filerna. Markdown och Obsidian ar standard.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="num">03</span>
+                    <p>Inget krav pa ny SaaS-plattform. Ni fortsatter med era verktyg.</p>
+                </div>
+                <div class="trust-item">
+                    <span class="num">04</span>
+                    <p>Skarpa uppdrag kan hanteras med NDA och databilaga.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
 
     <section id="priser">
-        <p class="section-label">Priser</p>
-        <h2 class="section-title">Enkla priser</h2>
+        <div class="container">
+            <p class="section-label">Priser</p>
+            <h2 class="section-title">Enkla priser</h2>
 
-        <div class="pricing">
-            <div class="pricing-card">
-                <h3>Gratis demo</h3>
-                <div class="price">0 kr</div>
-                <ul class="pricing-features">
-                    <li>3-5 dokument</li>
-                    <li>Liten demo-wiki</li>
-                    <li>30 min genomgang</li>
-                    <li>Inga bindningar</li>
-                </ul>
-                <a href="#kontakt" class="btn btn-secondary">Bestall demo</a>
-            </div>
-            <div class="pricing-card featured">
-                <h3>Pilot</h3>
-                <div class="price">12 000 kr <span>engångsbelopp</span></div>
-                <ul class="pricing-features">
-                    <li>20-30 källor</li>
-                    <li>Lokal Obsidian-vault</li>
-                    <li>Index, logg, source pages</li>
-                    <li>Concept/entity pages</li>
-                    <li>60 min walkthrough</li>
-                    <li>Forsta underhållsapport</li>
-                </ul>
-                <a href="#kontakt" class="btn btn-primary">Kop pilot</a>
-            </div>
-            <div class="pricing-card">
-                <h3>Underhall</h3>
-                <div class="price">2 500 kr <span>/månad</span></div>
-                <ul class="pricing-features">
-                    <li>Nya dokument inkorgen</li>
-                    <li>Lint och kvalitetskontroll</li>
-                    <li>Månadsrapport</li>
-                    <li>Eviga frågor och svar</li>
-                </ul>
-                <a href="#kontakt" class="btn btn-secondary">Läs mer</a>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Gratis mini-demo</h3>
+                    <div class="price">0 kr</div>
+                    <p class="desc">3-5 ofarliga dokument, 30 min genomgang.</p>
+                    <ul class="pricing-features">
+                        <li>Liten demo-wiki</li>
+                        <li>Inga bindningar</li>
+                        <li>Se resultatet direkt</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-secondary" style="width:100%;justify-content:center">Bestall demo</a>
+                </div>
+                <div class="pricing-card featured">
+                    <h3>Pilot</h3>
+                    <div class="price">12 000 kr <small>engangsbelopp</small></div>
+                    <p class="desc">20-30 källor, komplett vault, 60 min walkthrough.</p>
+                    <ul class="pricing-features">
+                        <li>Lokal Obsidian-vault</li>
+                        <li>Index, logg, source pages</li>
+                        <li>Concept/entity pages</li>
+                        <li>Forsta underhallsrapport</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-primary" style="width:100%;justify-content:center">Kop pilot</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Underhall</h3>
+                    <div class="price">5 000 kr <small>/ar</small></div>
+                    <p class="desc">Nya kallor, lint och uppdateringar.</p>
+                    <ul class="pricing-features">
+                        <li>Nya dokument inkorgen</li>
+                        <li>Kvalitetskontroll</li>
+                        <li>Manadsrapport</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-secondary" style="width:100%;justify-content:center">Kontakta oss</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="kontakt">
-        <div class="contact">
-            <h2>Vill du veta mer?</h2>
-            <p>Skicka 3-5 dokument så bygger vi en gratis demo-wiki.</p>
-            <a href="mailto:hej@strawberrai.se" class="btn btn-primary">Kontakta oss</a>
+    <div class="divider"></div>
+
+    <section id="kontakt" style="text-align:center">
+        <div class="container">
+            <div class="final-cta">
+                <h2>Har du 3 dokument som borde vara lattare att hitta i?</h2>
+                <p>Skicka dem sa bygger vi en mini-wiki. Helt gratis.</p>
+                <a href="mailto:hej@strawberrai.se" class="btn btn-primary">Boka demo</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>StrawberrAI — Lokal AI-wiki for svenska företag</p>
+        <p>StrawberrAI — Lokala AI-wikis for svenska foretag</p>
+        <div class="footer-logo">Strawberr<span class="r">r</span><span class="rr">AI</span></div>
     </footer>
 </body>
 </html>
