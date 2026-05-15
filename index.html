@@ -275,6 +275,58 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
+    .case-feature {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    .case-copy {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .case-copy h3 {
+      font-size: 29px;
+      line-height: 1.08;
+      margin-bottom: 18px;
+    }
+    .case-copy p {
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+    .case-metric {
+      background: var(--white);
+      padding: 18px;
+    }
+    .case-metric strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .case-metric span {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .case-media {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 10px;
+    }
     .segment {
       border: 1px solid var(--line);
       background: var(--white);
@@ -388,7 +440,7 @@
     @media (max-width: 860px) {
       .nav-inner { height: auto; min-height: 66px; align-items: flex-start; padding-top: 16px; padding-bottom: 16px; }
       .nav-links { display: none; }
-      .hero, .section-head, .before-after, .gallery, .pricing, .comparison { grid-template-columns: 1fr; }
+      .hero, .section-head, .before-after, .gallery, .pricing, .comparison, .case-feature { grid-template-columns: 1fr; }
       .hero { padding-top: 42px; min-height: auto; gap: 42px; }
       .section { padding: 70px 20px; }
       .problem-list, .steps, .segments, .wins { grid-template-columns: 1fr; }
@@ -415,6 +467,7 @@
         </a>
         <div class="nav-links">
           <a href="#demo">Demo</a>
+          <a href="#wiki-case">Wiki-case</a>
           <a href="#process">Så funkar det</a>
           <a href="#skillnad">Skillnaden</a>
           <a href="#trygghet">Trygghet</a>
@@ -433,6 +486,7 @@
           <div class="actions">
             <a class="btn primary" href="mailto:Andreas.guldberg@gmail.com?subject=StrawberrAI%20demo">Boka gratis demo</a>
             <a class="btn secondary" href="#demo">Se exempel</a>
+            <a class="btn secondary" href="demo-sundsvallsharvan.html">Se demo-wikin</a>
           </div>
           <p class="trust">Första demo görs med 3–5 ofarliga dokument. Inga känsliga filer behövs.</p>
         </div>
@@ -490,6 +544,36 @@
               <li>Frågor sparas som återanvändbara sidor.</li>
               <li>Loggen visar vad AI-agenten gjort.</li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="wiki-case">
+        <div class="section">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Live case</div>
+              <h2>Sundsvallshärvan som demo-wiki.</h2>
+            </div>
+            <p class="section-text">Vi har byggt ett konkret case där råa PDF:er, artiklar och clippings blev en lokal Obsidian-wiki med källor, begrepp, aktörer, beslut, insikter och frågor.</p>
+          </div>
+          <div class="case-feature">
+            <div class="case-copy">
+              <div>
+                <h3>Från materialkaos till demo-klar kunskapsbas.</h3>
+                <p>Caset visar vad StrawberrAI faktiskt levererar: en läsbar struktur, inte bara ett svar. Det blir lätt att se vad som är bekräftat, vad som är hypotes och vilka källor som saknas.</p>
+              </div>
+              <div class="case-metrics">
+                <div class="case-metric"><strong>81</strong><span>wiki-sidor</span></div>
+                <div class="case-metric"><strong>13</strong><span>begreppssidor</span></div>
+                <div class="case-metric"><strong>26</strong><span>aktörssidor</span></div>
+                <div class="case-metric"><strong>8</strong><span>analysfrågor</span></div>
+              </div>
+              <a class="btn primary" href="demo-sundsvallsharvan.html">Öppna case-sidan</a>
+            </div>
+            <div class="case-media">
+              <img src="assets/sundsvallsharvan-hero.svg" alt="Sundsvallshärvan som StrawberrAI LLM Wiki-demo">
+            </div>
           </div>
         </div>
       </section>
