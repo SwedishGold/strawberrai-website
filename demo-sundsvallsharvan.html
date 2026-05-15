@@ -105,6 +105,30 @@
     .card h3 { display: inline-flex; border-bottom: 4px solid var(--red); padding-bottom: 5px; margin-bottom: 22px; }
     .card p, .card li { color: var(--muted); line-height: 1.5; font-size: 16px; }
     .card ul { margin: 0; padding-left: 18px; }
+    .screens {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .screen-stack { display: grid; gap: 18px; }
+    .screen {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 10px;
+      box-shadow: 0 18px 54px rgba(0,0,0,.07);
+    }
+    .screen img { border: 1px solid var(--line); }
+    .screen figcaption {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 4px 2px;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
     .map { border: 1px solid var(--line); background: var(--white); padding: 12px; }
     .final { background: var(--ink); color: var(--paper); text-align: center; padding: 92px 22px; }
     .final h2 { max-width: 850px; margin: 0 auto; }
@@ -117,7 +141,7 @@
     @media (max-width: 860px) {
       .nav-inner { align-items: flex-start; padding-top: 16px; padding-bottom: 16px; }
       .nav-links { display: none; }
-      .hero, .section-head, .metrics, .flow, .cards { grid-template-columns: 1fr; }
+      .hero, .section-head, .metrics, .flow, .cards, .screens { grid-template-columns: 1fr; }
       .hero { min-height: auto; padding-top: 54px; gap: 42px; }
       .section { padding: 68px 20px; }
     }
@@ -207,13 +231,41 @@
       <div class="section">
         <div class="section-head">
           <div>
+            <div class="eyebrow">Screenshots</div>
+            <h2>Så ser resultatet ut i praktiken.</h2>
+          </div>
+          <p class="section-text">Det här är de vyer kunden faktiskt får: dashboard, source inventory, riskmatris och grafvy. De visar både innehåll, struktur och nästa research-steg.</p>
+        </div>
+        <div class="screens">
+          <figure class="screen">
+            <img src="assets/llm-wiki-dashboard-shot.svg" alt="Dashboard screenshot från StrawberrAI LLM Wiki">
+            <figcaption><span>Dashboard</span><span>demo-ready overview</span></figcaption>
+          </figure>
+          <div class="screen-stack">
+            <figure class="screen">
+              <img src="assets/llm-wiki-risk-shot.svg" alt="Riskmatris screenshot från LLM Wiki">
+              <figcaption><span>Riskmatris</span><span>bekräftat / hypotes / luckor</span></figcaption>
+            </figure>
+            <figure class="screen">
+              <img src="assets/llm-wiki-sources-shot.svg" alt="Source inventory screenshot från LLM Wiki">
+              <figcaption><span>Source inventory</span><span>spårbarhet</span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="section">
+        <div class="section-head">
+          <div>
             <div class="eyebrow">Systemkarta</div>
             <h2>En produkt, inte bara en sammanfattning.</h2>
           </div>
           <p class="section-text">Skillnaden är att varje körning lämnar efter sig ett kunskapssystem som går att öppna, läsa, länka vidare i och bygga på.</p>
         </div>
         <div class="map">
-          <img src="assets/wiki-system-map.svg" alt="Systemkarta för StrawberrAI LLM Wiki">
+          <img src="assets/llm-wiki-graph-shot.svg" alt="Grafvy med samband i StrawberrAI LLM Wiki">
         </div>
       </div>
     </section>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-label="Screenshot of source inventory in the LLM Wiki">
+  <rect width="1280" height="820" fill="#f7f6f1"/>
+  <rect x="60" y="46" width="1160" height="728" fill="#ffffff" stroke="#d8d6ce"/>
+  <text x="104" y="118" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="850" fill="#050505">Source Inventory</text>
+  <rect x="104" y="142" width="96" height="5" rx="2.5" fill="#e0001b"/>
+  <text x="104" y="194" font-family="Inter, Arial, sans-serif" font-size="18" fill="#77766f">Varje större påstående ska kunna spåras tillbaka till en source page.</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="15">
+    <rect x="104" y="240" width="1072" height="54" fill="#f7f6f1" stroke="#d8d6ce"/>
+    <text x="126" y="274" font-weight="800" fill="#050505">Källa</text>
+    <text x="632" y="274" font-weight="800" fill="#050505">Status</text>
+    <text x="820" y="274" font-weight="800" fill="#050505">Används till</text>
+    <rect x="104" y="294" width="1072" height="70" fill="#ffffff" stroke="#d8d6ce"/>
+    <text x="126" y="336" fill="#2a2a27">EBM - tillslag och misstankar januari 2026</text>
+    <text x="632" y="336" fill="#2f6f8f" font-weight="800">Bekräftad</text>
+    <text x="820" y="336" fill="#77766f">Brottsutredning</text>
+    <rect x="104" y="364" width="1072" height="70" fill="#ffffff" stroke="#d8d6ce"/>
+    <text x="126" y="406" fill="#2a2a27">Stadsbacken - värderingsbeslut och nedskrivning</text>
+    <text x="632" y="406" fill="#2f6f8f" font-weight="800">Bekräftad</text>
+    <text x="820" y="406" fill="#77766f">Värdering / ekonomi</text>
+    <rect x="104" y="434" width="1072" height="70" fill="#ffffff" stroke="#d8d6ce"/>
+    <text x="126" y="476" fill="#2a2a27">Clippings - styrning ansvar och oberoende utredning</text>
+    <text x="632" y="476" fill="#d18a2f" font-weight="800">Sekundär</text>
+    <text x="820" y="476" fill="#77766f">Politisk process</text>
+    <rect x="104" y="504" width="1072" height="70" fill="#ffffff" stroke="#d8d6ce"/>
+    <text x="126" y="546" fill="#2a2a27">ST - historiska varningssignaler 2013 och Petersvik</text>
+    <text x="632" y="546" fill="#d18a2f" font-weight="800">Sekundär</text>
+    <text x="820" y="546" fill="#77766f">Bakgrund / mönster</text>
+    <rect x="104" y="574" width="1072" height="70" fill="#ffffff" stroke="#d8d6ce"/>
+    <text x="126" y="616" fill="#2a2a27">Saknade källor: Newsec, KPMG, Deloitte, avtal</text>
+    <text x="632" y="616" fill="#e0001b" font-weight="800">Lucka</text>
+    <text x="820" y="616" fill="#77766f">Nästa research</text>
+  </g>
+  <rect x="104" y="688" width="1072" height="38" rx="3" fill="#050505"/>
+  <text x="128" y="713" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#f7f6f1">Källstyrka gör wikin säljbar: kunden ser både svaren och begränsningarna.</text>
+</svg>

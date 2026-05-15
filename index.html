@@ -327,6 +327,32 @@
       background: var(--white);
       padding: 10px;
     }
+    .case-screens {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .case-screen {
+      border: 1px solid var(--line);
+      background: var(--white);
+      padding: 8px;
+      min-width: 0;
+    }
+    .case-screen img {
+      border: 1px solid var(--line);
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+    .case-screen span {
+      display: block;
+      padding: 9px 2px 2px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 760;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
     .segment {
       border: 1px solid var(--line);
       background: var(--white);
@@ -443,7 +469,7 @@
       .hero, .section-head, .before-after, .gallery, .pricing, .comparison, .case-feature { grid-template-columns: 1fr; }
       .hero { padding-top: 42px; min-height: auto; gap: 42px; }
       .section { padding: 70px 20px; }
-      .problem-list, .steps, .segments, .wins { grid-template-columns: 1fr; }
+      .problem-list, .steps, .segments, .wins, .case-screens { grid-template-columns: 1fr; }
       .problem-list div { min-height: auto; }
     }
   </style>
@@ -574,6 +600,24 @@
             <div class="case-media">
               <img src="assets/sundsvallsharvan-hero.svg" alt="Sundsvallshärvan som StrawberrAI LLM Wiki-demo">
             </div>
+          </div>
+          <div class="case-screens" aria-label="Exempel från demo-wikin">
+            <a class="case-screen" href="demo-sundsvallsharvan.html">
+              <img src="assets/llm-wiki-dashboard-shot.svg" alt="Dashboard från demo-wikin">
+              <span>Dashboard</span>
+            </a>
+            <a class="case-screen" href="demo-sundsvallsharvan.html">
+              <img src="assets/llm-wiki-sources-shot.svg" alt="Source inventory från demo-wikin">
+              <span>Sources</span>
+            </a>
+            <a class="case-screen" href="demo-sundsvallsharvan.html">
+              <img src="assets/llm-wiki-risk-shot.svg" alt="Riskmatris från demo-wikin">
+              <span>Riskmatris</span>
+            </a>
+            <a class="case-screen" href="demo-sundsvallsharvan.html">
+              <img src="assets/llm-wiki-graph-shot.svg" alt="Grafvy från demo-wikin">
+              <span>Graph view</span>
+            </a>
           </div>
         </div>
       </section>

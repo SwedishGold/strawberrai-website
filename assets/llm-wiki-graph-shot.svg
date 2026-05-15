@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-label="Screenshot of a graph view in the LLM Wiki">
+  <rect width="1280" height="820" fill="#050505"/>
+  <rect x="42" y="38" width="1196" height="744" fill="#111111" stroke="#303030"/>
+  <text x="82" y="92" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" fill="#f7f6f1">Graph view / Sundsvallshärvan</text>
+  <g stroke-width="2" opacity=".75">
+    <line x1="640" y1="400" x2="330" y2="230" stroke="#d18a2f"/>
+    <line x1="640" y1="400" x2="910" y2="240" stroke="#2f6f8f"/>
+    <line x1="640" y1="400" x2="920" y2="560" stroke="#2f6f8f"/>
+    <line x1="640" y1="400" x2="330" y2="560" stroke="#e0001b"/>
+    <line x1="330" y1="230" x2="250" y2="420" stroke="#666"/>
+    <line x1="910" y1="240" x2="1030" y2="410" stroke="#666"/>
+    <line x1="920" y1="560" x2="1030" y2="410" stroke="#666"/>
+    <line x1="330" y1="560" x2="250" y2="420" stroke="#666"/>
+    <line x1="640" y1="400" x2="640" y2="170" stroke="#666"/>
+    <line x1="640" y1="400" x2="640" y2="650" stroke="#666"/>
+  </g>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <circle cx="640" cy="400" r="82" fill="#f7f6f1"/>
+    <text x="640" y="392" font-size="18" font-weight="850" fill="#050505">START</text>
+    <text x="640" y="420" font-size="15" fill="#77766f">Sundsvallshärvan</text>
+    <circle cx="330" cy="230" r="58" fill="#2f6f8f"/>
+    <text x="330" y="226" font-size="15" font-weight="850" fill="#ffffff">sources</text>
+    <text x="330" y="250" font-size="14" fill="#e8f2f5">13</text>
+    <circle cx="910" cy="240" r="58" fill="#d18a2f"/>
+    <text x="910" y="236" font-size="15" font-weight="850" fill="#ffffff">decisions</text>
+    <text x="910" y="260" font-size="14" fill="#fff2df">5</text>
+    <circle cx="920" cy="560" r="58" fill="#2f6f8f"/>
+    <text x="920" y="556" font-size="15" font-weight="850" fill="#ffffff">entities</text>
+    <text x="920" y="580" font-size="14" fill="#e8f2f5">26</text>
+    <circle cx="330" cy="560" r="58" fill="#e0001b"/>
+    <text x="330" y="556" font-size="15" font-weight="850" fill="#ffffff">questions</text>
+    <text x="330" y="580" font-size="14" fill="#ffe7e9">8</text>
+    <circle cx="250" cy="420" r="42" fill="#f7f6f1"/>
+    <text x="250" y="426" font-size="13" font-weight="850" fill="#050505">insights</text>
+    <circle cx="1030" cy="410" r="42" fill="#f7f6f1"/>
+    <text x="1030" y="416" font-size="13" font-weight="850" fill="#050505">concepts</text>
+    <circle cx="640" cy="170" r="38" fill="#f7f6f1"/>
+    <text x="640" y="176" font-size="13" font-weight="850" fill="#050505">brand</text>
+    <circle cx="640" cy="650" r="38" fill="#f7f6f1"/>
+    <text x="640" y="656" font-size="13" font-weight="850" fill="#050505">canvas</text>
+  </g>
+  <rect x="82" y="700" width="362" height="38" rx="3" fill="#f7f6f1"/>
+  <text x="104" y="724" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#050505">Relationer syns direkt i Obsidian Graph View</text>
+</svg>

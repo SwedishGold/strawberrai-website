@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="820" viewBox="0 0 1280 820" role="img" aria-label="Screenshot of a StrawberrAI LLM Wiki dashboard">
+  <rect width="1280" height="820" fill="#f7f6f1"/>
+  <rect x="48" y="42" width="1184" height="736" fill="#ffffff" stroke="#d8d6ce"/>
+  <rect x="48" y="42" width="1184" height="54" fill="#050505"/>
+  <circle cx="76" cy="69" r="7" fill="#e0001b"/>
+  <circle cx="99" cy="69" r="7" fill="#d18a2f"/>
+  <circle cx="122" cy="69" r="7" fill="#2f6f8f"/>
+  <text x="162" y="75" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#f7f6f1">StrawberrAI LLM Wiki / Dashboard</text>
+  <rect x="78" y="126" width="250" height="622" fill="#f7f6f1" stroke="#d8d6ce"/>
+  <text x="104" y="166" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" fill="#050505">LLM WIKI RAW VAULT</text>
+  <text x="104" y="210" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">START - Sundsvallshärvan</text>
+  <text x="104" y="244" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">_Dashboard</text>
+  <text x="104" y="278" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">sources / 13</text>
+  <text x="104" y="312" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">concepts / 13</text>
+  <text x="104" y="346" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">entities / 26</text>
+  <text x="104" y="380" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">insights / 6</text>
+  <text x="104" y="414" font-family="Inter, Arial, sans-serif" font-size="14" fill="#77766f">questions / 8</text>
+  <rect x="362" y="126" width="820" height="622" fill="#ffffff"/>
+  <text x="362" y="172" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="850" fill="#050505">Sundsvallshärvan</text>
+  <rect x="362" y="194" width="96" height="5" rx="2.5" fill="#e0001b"/>
+  <rect x="362" y="230" width="820" height="96" rx="8" fill="#f7f6f1" stroke="#d8d6ce"/>
+  <text x="392" y="266" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800" fill="#2f6f8f">Läget i en mening</text>
+  <text x="392" y="296" font-family="Inter, Arial, sans-serif" font-size="18" fill="#2a2a27">Kommunal bolags- och värderingskris med EBM-utredning, revisionskritik och nedskrivning.</text>
+  <g transform="translate(362 364)">
+    <rect width="188" height="124" fill="#f7f6f1" stroke="#d8d6ce"/>
+    <text x="22" y="48" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="850" fill="#050505">13</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="15" fill="#77766f">source pages</text>
+  </g>
+  <g transform="translate(573 364)">
+    <rect width="188" height="124" fill="#f7f6f1" stroke="#d8d6ce"/>
+    <text x="22" y="48" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="850" fill="#050505">26</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="15" fill="#77766f">entities</text>
+  </g>
+  <g transform="translate(784 364)">
+    <rect width="188" height="124" fill="#f7f6f1" stroke="#d8d6ce"/>
+    <text x="22" y="48" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="850" fill="#050505">5</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="15" fill="#77766f">decisions</text>
+  </g>
+  <g transform="translate(995 364)">
+    <rect width="187" height="124" fill="#f7f6f1" stroke="#d8d6ce"/>
+    <text x="22" y="48" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="850" fill="#050505">8</text>
+    <text x="22" y="82" font-family="Inter, Arial, sans-serif" font-size="15" fill="#77766f">questions</text>
+  </g>
+  <rect x="362" y="528" width="820" height="170" fill="#ffffff" stroke="#d8d6ce"/>
+  <text x="392" y="566" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="800" fill="#050505">Demo-flow</text>
+  <text x="392" y="604" font-family="Inter, Arial, sans-serif" font-size="16" fill="#77766f">1. Produktdemo  2. Brand  3. Start  4. Bekräftat/spekulativt  5. Tidslinje  6. Riskmatris</text>
+  <rect x="392" y="636" width="236" height="34" rx="3" fill="#050505"/>
+  <text x="414" y="659" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" fill="#f7f6f1">Öppna case canvas</text>
+</svg>
